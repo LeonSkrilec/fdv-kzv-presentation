@@ -1,6 +1,6 @@
 /*!
 * reveal.js 4.2.1
-* https://revealjs.com
+* http://leonskrilec.github.io/fdv-kzv-presentation
 * MIT licensed
 *
 * Copyright (C) 2011-2021 Hakim El Hattab, https://hakim.se
