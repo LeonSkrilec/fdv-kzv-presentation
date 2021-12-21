@@ -7,3 +7,7 @@ section > p {
   margin-left: auto !important;
   margin-right: auto !important;
 }
+
+ul > li {
+  margin-bottom: 20px;
+}
