@@ -2,7 +2,7 @@
   "name": "reveal.js",
   "version": "4.2.1",
   "description": "The HTML Presentation Framework",
-  "homepage": "https://revealjs.com",
+  "homepage": "http://leonskrilec.github.io/fdv-kzv-presentation",
   "subdomain": "revealjs",
   "main": "dist/reveal.js",
   "module": "dist/reveal.esm.js",
@@ -10,7 +10,9 @@
   "scripts": {
     "test": "gulp test",
     "start": "gulp serve",
-    "build": "gulp build"
+    "build": "gulp build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "author": {
     "name": "Hakim El Hattab",
