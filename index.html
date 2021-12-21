@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <title>FDV KZV presentation</title>
+
+    <link rel="stylesheet" href="dist/reset.css" />
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/solarized.css" />
+    <link rel="stylesheet" href="dist/custom.css" />
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css" />
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h2>FROM IDEA TO EFFICIENT DIGITAL PRODUCT</h2>
+          <footer style="margin-top: 80px">
+            Leon Škrilec <br />
+            leonskrilec.com <br />
+            <small class="small" style="margin-top: 20px">December 2021</small>
+          </footer>
+        </section>
+        <section>
+          <h2>Some things about me</h2>
+          <ul style="list-style-type: none">
+            <li>Social informatics graduate 2020</li>
+            <li>Freelance web developer</li>
+            <li>Co-founder at Kam za vikend</li>
+          </ul>
+        </section>
+        <section>
+          <h2>What will I be talking about today?</h2>
+          <p>
+            In this ~30 minute lecture I would like to show you how we went from
+            an idea to efficient digital product.
+          </p>
+          <aside class="notes">
+            <p>
+              Earlier this year me and my two co-founders launched a website
+              called “Kam za vikend” which aims to give people unique trip ideas
+              and information about local sights and things to do. Our product
+              is performing very well, users spent a lot of time on a website
+              and we already made some money selling advertising slots on the
+              website.
+            </p>
+            <p>
+              In my ~30 minute lecture today I will be giving you an overview on
+              how we went from an idea to an efficient digital product. I will
+              walk you through the process of ideating, prototyping, designing
+              and testing a digital product. We will be going through a process
+              step-by-step, from an initial insight to a minimum viable produt
+              (MVP).
+            </p>
+            <p>
+              I think this will be very valuable to you since you were hearing
+              mostly theoretical concepts about web design throughout this
+              semester (Andraž correct me if I am wrong 🙂) and I will be giving
+              you mostly practical tips on how to implement them in real world.
+            </p>
+            <p>
+              And I think this is also going to be a joy for me to remind myself
+              of all the problems we solved, all the obstacles we faced and all
+              the hours we put into this project.
+            </p>
+          </aside>
+        </section>
+        <section>
+          <iframe
+            src="https://kamzavikend.si"
+            frameborder="0"
+            class="r-stretch"
+            style="
+              position: fixed;
+              top: 0;
+              left: 0;
+              width: 100vw;
+              height: 100vh;
+              background-color: white;
+            "
+          ></iframe>
+        </section>
+        <section>
+          <img src="./images/kzv-analytics-overview.png" alt="" />
+        </section>
+        <section>
+          <h3>... rewind back to 2019 ...</h3>
+          <aside class="notes">
+            <p>
+              Now lets rewind to the year 2019 to the start of our product
+              development process. Slovenia was right in the middle of lockdown,
+              people were stuck in their municipalities because of the
+              government restrictions and there were a lot of bad mood and
+              uncertainty among Slovenian public. A lot of people also opposed
+              the government with their regulations. That is why I decided to
+              build some sort of social responsible Aprils fool joke.
+            </p>
+          </aside>
+        </section>
+        <section>
+          <iframe
+            src="https://kamzavikend.netlify.app/"
+            frameborder="0"
+            class="r-stretch"
+            style="width: 100%; height: 100%; overflow: hidden"
+          ></iframe>
+          <aside class="notes">
+            <p>
+              It obviously is a joke and I hope this app encouraged some people
+              to stay at home. But the real insight I got when people started
+              commenting that the app is not working. That they have inputted 5
+              or 6 different cities and still did not get the results. Then it
+              struck me. Maybe people really need that kind of app? 🙂 I
+              partnered up with my former collegue Ana and we went on pursuing
+              this idea.
+            </p>
+          </aside>
+        </section>
+        <section>
+          <h3>Let's start our product development journey!</h3>
+        </section>
+        <section>
+          <h3>Digital product development process</h3>
+          <ol>
+            <li>Ideation</li>
+            <li>Prototyping</li>
+            <li><u>Visual design</u></li>
+            <li>Technical development</li>
+            <li>Measure & optimize</li>
+          </ol>
+        </section>
+        <section>
+          <section>
+            <h2>Step 1: Ideation</h2>
+            <p>Validate your idea and define your problem statement.</p>
+            <hr />
+            <ul>
+              <li>Do people really need a solution to this problem?</li>
+              <li>Is their problem big enough?</li>
+              <li>Is there enough market demand for my idea?</li>
+              <li>
+                What are people currently using as an alternative to your
+                solution?
+              </li>
+              <li>Can you be 10x better then the competition?</li>
+            </ul>
+          </section>
+          <section>
+            <h3>Where innovation happens</h3>
+            <img src="./images/innovation.png" alt="" />
+          </section>
+          <section>
+            <h3>Our problem statements (hypotheses)</h3>
+            <ul>
+              <li>Slovenes cant find relevant trip ideas online</li>
+              <li>Finding a trip idea in Slovenia is a time consuming task</li>
+              <li>
+                Information about trips in Slovenia is very fragmented across
+                various small websites, blogs and social accounts
+              </li>
+              <li>
+                Slovenes would like to have a platform to give them relevant
+                trip ideas at any time
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h3>Research!</h3>
+            <ul>
+              <li>Quantitative survey</li>
+              <li>Spent 10€ promoting a post on Facebook</li>
+              <li>Outstanding response rate: 550 completed surveys</li>
+              <li>A lot of interesting facts</li>
+            </ul>
+          </section>
+          <section>
+            <img src="./images/survey/1.png" alt="" />
+          </section>
+          <section>
+            <img src="./images/survey/2.png" alt="" />
+          </section>
+          <section>
+            <img src="./images/survey/3.png" alt="" />
+          </section>
+          <section>
+            <img src="./images/survey/4.png" alt="" />
+          </section>
+          <section>
+            <img src="./images/survey/6.png" alt="" />
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>Step 2: Prototyping</h2>
+            <ul>
+              <li>Simple experimental model of a proposed solution</li>
+              <li>User stories</li>
+              <li>Low fidelity (Lo-fi) → high fidelity (Hi-fi)</li>
+            </ul>
+            <aside class="notes">
+              <p>
+                Armed with useful information about the people whose problem we
+                were trying to solve, we started with digital product
+                development process step 2: **Prototyping.**
+              </p>
+              <p>
+                The main goal of this step is to develop a prototype of your
+                proposed solution, test it, gather feedback from your users and
+                iterate, improving your prototype until you are satisfied with
+                the solution.
+              </p>
+              <p>
+                It is very helpful to imagine how people will be using your
+                product and who this people will be. For that purpose you can
+                create imaginary personas and describe their journey (user flow)
+                using your solution.
+              </p>
+              <p>
+                Prototypes usually go from very low fidelity (lo-fi) - sketches,
+                storyboards, scribbles - to high fidelity (hi-fi) - detailed
+                wireframes of proposed solution.
+              </p>
+            </aside>
+          </section>
+          <section>
+            <img src="./images/protoyping-cost.png" alt="" />
+          </section>
+          <section>
+            <img src="./images/mvp.png" alt="" height="600" />
+            <aside class="notes">
+              <p>
+                It is also important that you try to define a minimum viable
+                product in this stage. This is particularly hard, because in
+                this stage you want to include every possbile functionality in
+                your product. But you have to be aware, that it is better to
+                build a reliable product with fewer functionalities than
+                unreliable one with plenty of functionalities. You really have
+                to strip your product to its essentials and deliver most value
+                with minimum effort.
+              </p>
+            </aside>
+          </section>
+          <section>
+            <h3>Kam za vikend user personas</h3>
+            <ul>
+              <li style="margin-bottom: 10px">
+                Zdravko Počivalšek: 58 years old pensioner, lives in Kamnik,
+                amateur photographer, looking for cool photo spots in Slovenia
+              </li>
+              <li style="margin-bottom: 10px">
+                Giancarlo Baghetti: 34 years old italian motor biker, spending
+                holidays in Bohinj, looking for natural beauties in the area
+              </li>
+              <li style="margin-bottom: 10px">
+                Simon Žabec: 36 years old, two children 5 and 8 years old, one 3
+                years old, from Bloška Polica, looking mostly for activities to
+                entertain his children
+              </li>
+            </ul>
+            <aside class="notes">
+              <p>
+                For Kam za vikend we knew that we have to build some kind of a
+                collection of trip ideas but we did not know exactly what is the
+                optimal flow for users to interact with that collection. That’s
+                why we imagined 10 users, we desribed them thoroughly and we
+                imagined their usage of our solution.
+              </p>
+              <p>
+                Even only from these three personas you can see, that each of
+                them has unique problem and would prefer a unique solution. The
+                main challenge here is to define a prototype that would
+                efficiently solve a problem for as many people as possible.
+              </p>
+            </aside>
+          </section>
+          <section>
+            <h3>From lo-fi to hi-fi prototypes</h3>
+            <aside class="notes">
+              <p>
+                Protoyping is iterative process. We went from most lo-fi
+                prototypes to the final wireframe in 2 months. We gathered a lot
+                of feedback from actual users throughout the process. We learned
+                a lot.
+              </p>
+            </aside>
+          </section>
+          <section data-transition="fade">
+            <img
+              class="r-frame"
+              src="./images/proto/lo-fi/0001.jpg"
+              height="600"
+            />
+          </section>
+          <section data-transition="fade">
+            <img
+              class="r-frame"
+              src="./images/proto/lo-fi/0002.jpg"
+              height="600"
+            />
+          </section>
+          <section data-transition="fade">
+            <img
+              class="r-frame"
+              src="./images/proto/lo-fi/0003.jpg"
+              height="600"
+            />
+          </section>
+          <section data-transition="fade">
+            <img
+              class="r-frame"
+              src="./images/proto/lo-fi/0004.jpg"
+              height="600"
+            />
+          </section>
+          <section data-transition="fade">
+            <img
+              class="r-frame"
+              src="./images/proto/me-fi/0001.jpg"
+              height="600"
+            />
+          </section>
+          <section data-transition="fade">
+            <img
+              class="r-frame"
+              src="./images/proto/me-fi/0002.jpg"
+              height="600"
+            />
+          </section>
+          <section data-transition="fade">
+            <img
+              class="r-frame"
+              src="./images/proto/me-fi/0003.jpg"
+              height="600"
+            />
+          </section>
+          <section data-transition="fade">
+            <img
+              class="r-frame"
+              src="./images/proto/hi-fi/0001.jpg"
+              height="600"
+            />
+          </section>
+          <section data-transition="fade">
+            <img
+              class="r-frame"
+              src="./images/proto/hi-fi/0002.jpg"
+              height="600"
+            />
+          </section>
+          <section data-transition="fade">
+            <img
+              class="r-frame"
+              src="./images/proto/hi-fi/0003.jpg"
+              height="600"
+            />
+          </section>
+          <section data-transition="fade">
+            <img
+              class="r-frame"
+              src="./images/proto/hi-fi/0004.jpg"
+              height="600"
+            />
+          </section>
+
+          <section data-transition="fade">
+            <img
+              class="r-frame"
+              src="./images/proto/wf-me-fi/Homepage.jpg"
+              height="600"
+            />
+          </section>
+          <section data-transition="fade">
+            <img
+              class="r-frame"
+              src="./images/proto/wf-me-fi/Izleti.jpg"
+              height="600"
+            />
+          </section>
+          <section data-transition="fade">
+            <img
+              class="r-frame"
+              src="./images/proto/wf-me-fi/Primer_izleta.jpg"
+              height="600"
+            />
+          </section>
+          <section>
+            <iframe
+              style="border: 1px solid rgba(0, 0, 0, 0.1)"
+              width="100%"
+              height="100%"
+              class="r-stretch"
+              src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FLFGWUwyi6maWPMqFfeLyn2%2FKZV-prototypes%3Fnode-id%3D504%253A1006"
+              allowfullscreen
+            ></iframe>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>Step 3: Visual design</h2>
+            <p>
+              All about implementing colors, typography, images and hierarchy in
+              a way that enhances a design or interaction.
+            </p>
+            <aside class="notes">
+              <p>
+                So we had our prototype and we tested in on different users to
+                see if user journey flow is clear and that it makes sense to our
+                users. Now it is time to tackle the third step of product
+                development process: **Visual design.**
+              </p>
+
+              <p>
+                Visual design is all about implementing colors, typography,
+                images, spacings in a way that enhances a design or interaction.
+              </p>
+            </aside>
+          </section>
+          <section>
+            <h3>Two aspects of visual design in digital products</h3>
+
+            <ul>
+              <li>
+                Build a brand image (control how people perceive your brand)
+              </li>
+              <li>
+                Make your interface a joy to use (people should experience
+                positive emotions while using your product)
+              </li>
+            </ul>
+            <aside class="notes">
+              <p>
+                Visual design is all about implementing colors, typography,
+                images, spacings in a way that enhances a design or interaction.
+              </p>
+              <p>Two aspects of visual design in digital products:</p>
+
+              <ul>
+                <li>
+                  Build a brand image (control how people perceive your brand)
+                </li>
+                <li>
+                  Make your interface a joy to use (people should experience
+                  positive emotions while using your product)
+                </li>
+              </ul>
+            </aside>
+          </section>
+          <section>
+            <img src="./images/hierarchy-of-user-needs.png" alt="" />
+            <aside class="notes">
+              <p>
+                If we look at Aarron Walters hierarchy of needs which is quite
+                similar to Maslow’s hierarchy in psychology, we can see, that
+                product must first be functional and reliable, only then can we
+                worry about making it usable and pleasurable. Visual design is
+                all about making product more usable and pleasurable.
+              </p>
+              <p>
+                To make product usable the designer should bring user’s
+                attention to the right infromation and functionality, using
+                different sizing, colors and typography. Important elements in
+                the interface should be highlighted so user can seamlessly move
+                through the journey.
+              </p>
+            </aside>
+          </section>
+          <section>
+            <img src="./images/brand-colors.png" alt="" />
+          </section>
+          <section>
+            <h3>Kam za vikend colors</h3>
+            <img src="./images/kzv-colors.png" alt="" />
+          </section>
+          <section>
+            <h3>Logo evolution</h3>
+            <img src="./images/kzv-logo.png" alt="" height="600" />
+          </section>
+          <section>
+            <h3>Typography stack</h3>
+            <img src="./images/typography-stack.png" alt="" height="600" />
+          </section>
+          <section>
+            <h3>Look & feel</h3>
+            <p>Experimenting with website look & feel.</p>
+          </section>
+          <section data-transition="fade">
+            <img src="./images/design/1.png" alt="" height="600" />
+          </section>
+          <section data-transition="fade">
+            <img src="./images/design/2.png" alt="" height="600" />
+          </section>
+          <section data-transition="fade">
+            <img src="./images/design/3.png" alt="" height="600" />
+          </section>
+          <section data-transition="fade">
+            <img src="./images/design/4.png" alt="" height="600" />
+          </section>
+          <section data-transition="fade">
+            <img src="./images/design/5.png" alt="" height="600" />
+          </section>
+          <section>
+            <h3>First interactive design prototypes</h3>
+            <p>Mobile & desktop version</p>
+          </section>
+          <section>
+            <iframe
+              style="border: 1px solid rgba(0, 0, 0, 0.1)"
+              width="100%"
+              height="100%"
+              class="r-stretch"
+              src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FFtf2Omr28Torves58sgc6W%2FKZV---web-design-6---za-test%3Fnode-id%3D1227%253A2862%26starting-point-node-id%3D1227%253A2862"
+              allowfullscreen
+            ></iframe>
+
+            <aside class="notes">
+              <p>
+                We created 2 interactive prototypes of a homepage - one for
+                desktop users and one for mobile users - and started with
+                usability interviews. We showed the prototype to at least 15
+                different people, observing their interactions and asking them
+                many questions about their experience.
+              </p>
+              <p>
+                We learned a lot from these interviews and came to the final
+                version of our design:
+              </p>
+            </aside>
+          </section>
+          <section>
+            <h3>Final design version</h3>
+          </section>
+          <section>
+            <iframe
+              style="border: 1px solid rgba(0, 0, 0, 0.1)"
+              width="100%"
+              height="100%"
+              class="r-stretch"
+              src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Ff4NjhEDOqw29Zhi1Uoz6BD%2FKZV---web-design-MVP%3Fnode-id%3D1896%253A123%26scaling%3Dmin-zoom%26page-id%3D1896%253A0%26starting-point-node-id%3D1896%253A324"
+              allowfullscreen
+            ></iframe>
+            <aside class="notes">
+              <p>
+                We conducted many interviews again to test the final design
+                proposal and it showed much less friction in user journey as did
+                the previous versions. We were happy to proceed with our final
+                version.
+              </p>
+            </aside>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>Step 4: Technical development</h2>
+            <p>Static design → Interactive website</p>
+            <hr />
+            <ul>
+              <li>Architecting digital infrastructure</li>
+              <li>Planning and building databases</li>
+              <li>Coding application’s backend</li>
+              <li>Coding application’s frontend</li>
+            </ul>
+            <aside class="notes">
+              <p>
+                Once the design is ready and whole team is satisfied the design
+                has to be translated into code. That is the 4th step in digital
+                product development: Technical development.
+              </p>
+              <p>
+                The main goal of this step is to turn design into a fully
+                working and interactive solution. In terms of online digital
+                products (web sites, online platforms, web apps) this usually
+                involves:
+              </p>
+              <ul>
+                <li>
+                  - Architecting digital infrastructure (how all the services
+                  will communicate)
+                </li>
+                <li>
+                  - Planning and building databases (how the data will be
+                  stored, structured and connected)
+                </li>
+                <li>
+                  - Coding application’s backend (server side code which usually
+                  process, store and serve data to the client)
+                </li>
+                <li>
+                  - Coding application’s frontend (client side code - coding
+                  interactive user interface)
+                </li>
+              </ul>
+            </aside>
+          </section>
+          <section>
+            <h3>Kam za vikend digital infrasturcture</h3>
+            <img src="./images/infrastructure.jpg" alt="" height="600" />
+          </section>
+          <section>
+            <h3>Kam za vikend database model</h3>
+            <img src="./images/db-model.png" alt="" height="600" />
+          </section>
+          <section>
+            <img src="./images/fe-be.png" alt="" height="600" />
+          </section>
+          <section>
+            <h3>Kam za vikend backend</h3>
+
+            <ul>
+              <li>Serve data about trip ideas</li>
+              <li>Handle images, resizes, storage</li>
+              <li>
+                Handle locations, translating coordinates to municipality and
+                region within Slovenia
+              </li>
+              <li>Providing search results</li>
+            </ul>
+
+            <aside class="notes">
+              <p>KZV backend:</p>
+              <ul>
+                <li>- Serve data about trip ideas</li>
+                <li>- Handle images, resizes, storage</li>
+                <li>
+                  - Handle positions, translating coordinates to municipality
+                  and region within Slovenia
+                </li>
+              </ul>
+            </aside>
+          </section>
+          <section>
+            <h3>Kam za vikend front end</h3>
+            <p>Our MVP! 😎</p>
+            <p>This is the first version of the product that went public.</p>
+          </section>
+          <section>
+            <iframe
+              src="https://kamzavikend.si"
+              style="width: 100%; height: 100%; background-color: white"
+              class="r-stretch"
+              frameborder="0"
+            ></iframe>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>Step 5: Measure and optimize</h2>
+
+            <ol>
+              <li>Define your KPIs</li>
+              <li>Set up tools to measure them</li>
+              <li>Analyse & optimise</li>
+            </ol>
+
+            <aside class="notes">
+              You have to think about your product KPIs. What metrics should we
+              measure? Of course there are a lot of metrics that can tell you if
+              your product is performing well - some of these metrics are:
+              Number of users, time spent on page, bounce rate, traffic
+              acqusition channels and others. But most importantly each product
+              has to have a north star metric. This is metric that is the most
+              important one and is directly linked to business success.
+            </aside>
+          </section>
+          <section>
+            <img src="./images/north-star-metric.png" alt="" />
+            <aside class="notes">
+              <p>
+                We are still figuring out what the north star metric will be for
+                Kam za vikend product. Because we are planning to implement
+                advertising business model our north star metric will probably
+                be either traffic (number of users on our site) or time each
+                user spends on page.
+              </p>
+            </aside>
+          </section>
+          <section>
+            <h3>SEO optimisation</h3>
+            <p>What your potential users will google for?</p>
+            <aside class="notes">
+              <p>
+                One other thing you need to figure out is SEO optimization. If
+                you plan to acquire users through organic search (Google) you
+                need to have some sort of SEO optimization in mind. You have to
+                think about what your potential users will google for and then
+                optimise your content accordingly.
+              </p>
+            </aside>
+          </section>
+          <section>
+            <img src="./images/seo.png" alt="" height="600" />
+
+            <aside class="notes">
+              <p>
+                For Kam za vikend, Google brings in the most traffic (34%),
+                followed by Facebook and Instagram. We are also measuring which
+                keywords people are seraching for and on which position we rank
+                among google search results. We can thus see, for which keywords
+                must we optimise.
+              </p>
+            </aside>
+          </section>
+          <section>
+            <h3>HotJar recordings</h3>
+
+            <iframe
+              src="https://insights.hotjar.com/r?site=2698852&recording=8987936207&startTime=10000&token=f146c24baa6aa98e9768e88fc6de474d"
+              style="width: 100%; height: 100%"
+              class="r-stretch"
+              frameborder="0"
+            ></iframe>
+            <aside class="notes">
+              <p>
+                Another tool worth mentoning here is HotJar. With HotJar you can
+                record user sessions and then watch the video of their journey.
+                If we have time, maybe we can watch a sample user recording.
+              </p>
+            </aside>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>Looking ahead</h2>
+            <p>
+              Building MVP is one thing. Growing and improving your product &
+              business is another one.
+            </p>
+          </section>
+          <section>
+            <h3>Our objectives</h3>
+            <ul>
+              <li>Sustainable business model</li>
+              <li>Give users the ability to become content creators</li>
+              <li>Expanding content categories</li>
+              <li>Mobile application</li>
+              <li>Web 3.0</li>
+            </ul>
+            <aside class="notes">
+              <p>
+                In 2022 we want to start building a sustainable business model
+                for Kam za vikend and add features that will bring users even
+                more value.
+              </p>
+
+              <p>
+                We have also learned that we can not gather all the infromation
+                about the trips around Slovenia by ourselves that is why we will
+                be giving more control to our users. We will give them an
+                opportunity to create content with us and help us build the
+                biggest trip ideas database in Slovenia.
+              </p>
+              <p>
+                We also plan to expand content categories, adding a lot of ideas
+                that are currently not supported. Ideas for commercial tourist
+                activities for example rafting, bungee jumping, ziplines etc. We
+                intentionally left these ideas out, because we have to think
+                about how will we monetize these ideas.
+              </p>
+
+              <p>
+                We also plan to create an mobile application which will open
+                many doors for us, since we will be able to use mobile cameras
+                and location services to prompt users about relevant trip ideas
+                around them.
+              </p>
+
+              <p>
+                We are also looking into the recent hype about Web 3.0. We are
+                looking for different possibilities on how to give users an
+                opportunity to earn income by creating content on our platform.
+                This certainly has become easier with payment platforms like
+                Stripe or with blockchain and cryptocurrency technologies.
+              </p>
+            </aside>
+          </section>
+          <section>
+            <h3>In the long run, anything is possible.</h3>
+            <p>We will see where the path will take us.</p>
+          </section>
+        </section>
+
+        <section>
+          <h3>Thanks for your attention</h3>
+        </section>
+      </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+      });
+    </script>
+  </body>
+</html>

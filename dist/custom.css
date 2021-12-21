@@ -1,0 +1,13 @@
+.flex {
+  display: flex;
+}
+
+section > p {
+  max-width: 980px;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+ul > li {
+  margin-bottom: 20px;
+}
